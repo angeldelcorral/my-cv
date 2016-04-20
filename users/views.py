@@ -11,7 +11,7 @@ from django.template import RequestContext
 from users.models import UserProfile
 
 def user_list(request):
-    users = User.objects.filter()
+    user = User.objects.filter()
     return render_to_response("admin/users/index.html", locals(), context_instance=RequestContext(request))
 
 def edit_user(request, user_id=None):

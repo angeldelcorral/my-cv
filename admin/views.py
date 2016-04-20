@@ -65,10 +65,9 @@ def login_view(request):
             ctx = {'msg': msg, 'page': 'ag'}
             return render_to_response("admin/login.html", ctx, context_instance=RequestContext(request))
 
-
 def logout_view(request):
     logout(request)
-    return HttpResponseRedirect('/home')
+    return HttpResponseRedirect('/')
 
 
 

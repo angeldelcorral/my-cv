@@ -16,7 +16,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>MyCV | Angel Del Corral</title>
+    <title>MyCV | {{user.username}}</title>
 
     <!-- Favicons-->
     <link rel="icon" href="{% static 'admin/images/favicon/favicon-32x32.png' %}"  sizes="32x32">
@@ -58,7 +58,7 @@
         <div class="navbar-fixed">
             <nav class="cyan">
                 <div class="nav-wrapper">
-                    <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="{% static 'admin/images/materialize-logo.png' %}" alt="materialize logo"></a> <span class="logo-text">MyCV - {{userprofile.first_name}} {{userprofile.last_name}}</span></h1>
+                    <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="{% static 'admin/images/materialize-logo.png' %}" alt="materialize logo"></a> <span class="logo-text">Prueba</span></h1>
                     <ul class="right hide-on-med-and-down">
                         <li class="search-out">
                             <input type="text" class="search-out-text">
@@ -110,7 +110,7 @@
                                     <li><a href="/admin/logout"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
                                     </li>
                                 </ul>
-                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">{{ user.username|title }}<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">{{ user.username }}<i class="mdi-navigation-arrow-drop-down right"></i></a>
                                 <p class="user-roal">Adminstrador</p>
                             </div>
                         </div>
