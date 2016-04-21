@@ -62,7 +62,7 @@ def login_view(request):
                 msg = "Error no contemplado"
                 log.error(" Unknown error: %s" % sys.exc_value)
 
-            ctx = {'msg': msg, 'page': 'ag'}
+            ctx = {'msg': msg, 'page': 'ag', 'user': 'user'}
             return render_to_response("admin/login.html", ctx, context_instance=RequestContext(request))
 
 def logout_view(request):

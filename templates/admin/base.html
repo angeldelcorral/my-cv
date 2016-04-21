@@ -16,7 +16,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>MyCV | {{user.username}}</title>
+    <title>MyCV | {{user.first_name}} {{user.last_name}}</title>
 
     <!-- Favicons-->
     <link rel="icon" href="{% static 'admin/images/favicon/favicon-32x32.png' %}"  sizes="32x32">
@@ -58,7 +58,7 @@
         <div class="navbar-fixed">
             <nav class="cyan">
                 <div class="nav-wrapper">
-                    <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="{% static 'admin/images/materialize-logo.png' %}" alt="materialize logo"></a> <span class="logo-text">Prueba</span></h1>
+                    <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="{% static 'admin/images/materialize-logo.png' %}" alt="materialize logo"></a> <span class="logo-text">MyCV - {{user.first_name}} {{user.last_name}}</span></h1>
                     <ul class="right hide-on-med-and-down">
                         <li class="search-out">
                             <input type="text" class="search-out-text">
@@ -110,7 +110,7 @@
                                     <li><a href="/admin/logout"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
                                     </li>
                                 </ul>
-                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">{{ user.username }}<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">{{user.first_name | title}} {{user.last_name | title}}<i class="mdi-navigation-arrow-drop-down right"></i></a>
                                 <p class="user-roal">Adminstrador</p>
                             </div>
                         </div>
@@ -264,8 +264,8 @@
 
                 <!--start container-->
                 <div class="container">
-
-                    <!--chart dashboard start-->
+                    
+                    <!--chart dashboard start
                     <div id="chart-dashboard">
                         <div class="row">
                             <div class="col s12 m8 l8">
@@ -494,11 +494,11 @@
                             </div>
                         </div>
                     </div>
-                    <!--chart dashboard end-->
+                    chart dashboard end-->
 
                     <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-                    <!--card stats start-->
+                    <!--card stats start
                     <div id="card-stats">
                         <div class="row">
                             <div class="col s12 m6 l3">
@@ -556,11 +556,11 @@
                             </div>                            
                         </div>
                     </div>
-                    <!--card stats end-->
+                    card stats end-->
 
                     <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-                    <!--card widgets start-->
+                    <!--card widgets start
                     <div id="card-widgets">
                         <div class="row">
 
@@ -675,11 +675,11 @@
 
                         </div>
                     </div>
-                    <!--card widgets end-->
+                    card widgets end-->
 
                     <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-                    <!--work collections start-->
+                    <!--work collections start
                     <div id="work-collections">
                         <div class="row">
                             <div class="col s12 m12 l6">
@@ -824,7 +824,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--work collections end-->
+                    work collections end-->
 
                 </div>
                 <!--end container-->
@@ -832,7 +832,7 @@
             <!-- END CONTENT -->
             
             <!-- //////////////////////////////////////////////////////////////////////////// -->
-            <!-- START RIGHT SIDEBAR NAV-->
+            <!-- START RIGHT SIDEBAR NAV
             <aside id="right-sidebar-nav">
                 <ul id="chat-out" class="side-nav rightside-navigation">
                     <li class="li-hover">
@@ -966,7 +966,10 @@
                         </li>
                         </ul>
                     </li>
-                </ul>
+                </ul>-->
+
+            {% block content%}
+            {% endblock %}    
             </aside>
             <!-- LEFT RIGHT SIDEBAR NAV-->
 
@@ -981,8 +984,8 @@
     <!-- //////////////////////////////////////////////////////////////////////////// -->
 
     <!-- START FOOTER -->
-    <footer class="page-footer">
-        <div class="container">
+    <footer class="page-footer ">
+        <!--<div class="container">
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">World Market</h5>
@@ -998,16 +1001,16 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright ">
             <div class="container">
-                Copyright © 2015 <a class="grey-text text-lighten-4" href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs" target="_blank">GeeksLabs</a> All rights reserved.
+                Copyright © 2016 <a class="grey-text text-lighten-4" href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs" target="_blank">GeeksLabs</a> All rights reserved.
                 <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="http://geekslabs.com/">GeeksLabs</a></span>
             </div>
         </div>
     </footer>
-    <!-- END FOOTER -->
+    END FOOTER -->
 
-{% block content %}
+{% block footer %}
 {% endblock %}
 
     <!-- ================================================
