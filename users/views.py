@@ -45,6 +45,8 @@ def edit_user(request, user_id=None):
             user_profile.user = request.POST['user']
         if 'birthdate' in request.POST:
             user_profile.birthdate = request.POST['birthdate']
+        if 'pic_profile' in request.POST:
+            user_profile.pic_profile = request.POST['pic_profile']
 
         user_profile.save()
 

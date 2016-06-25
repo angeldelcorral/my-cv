@@ -23,7 +23,7 @@ from django.conf import settings
 admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', include('home.urls')),
+    url(r'^', include('home.urls')),
     #url(r'^home/', include('home.urls')),
     url(r'^admin/', include('admin.urls')),
     url(r'^admin/users/', include('users.urls')),

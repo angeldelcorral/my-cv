@@ -13,7 +13,7 @@
 	        	</div>
 	        </div>    
 	         <div style="color: teal; padding: 15px 50px 5px 50px; float: right; font-size: 16px;">
-                    		&Uacute;ltimo Acceso : {{user.last_login | date:"d-m-Y P" }} 
+                    		&Uacute;ltimo Acceso : {{user.last_login}} 
              </div>    
 	        </section>
 	        <div class="row">
@@ -37,13 +37,81 @@
 
                         </div>
                         <div class="card-reveal">
-	                            <span class="card-title grey-text text-darken-4">{{user.first_name}} {{user.last_name}} <i class="mdi-navigation-close right"></i></span>
-	                            <p><strong style="color: teal"> Informaci&oacuten detallada. </strong></p>
-	                            <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Project Manager</p>
-	                            <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> {{user.cell_phone}}</p>
-	                            <p><i class="mdi-communication-email cyan-text text-darken-2"></i> {{user.email}}</p>
-	                            <p><i class="mdi-social-cake cyan-text text-darken-2"></i> {{user.birthdate}}</p>
-	                            <p><i class="mdi-device-airplanemode-on cyan-text text-darken-2"></i> Venezolano</p>
+                            <span class="card-title grey-text text-darken-4">Perfil de Usuario/Edici&oacuten<i class="mdi-navigation-close right"></i></span>
+                            
+                            <p><strong style="color: teal"> Informaci&oacuten detallada. </strong></p>
+                            <form action="." method="POST">
+		                            <div class="row">
+				                        <div class="input-field col s6">
+				                          <i class="mdi-action-account-circle prefix"></i>
+				                          <input id="first_name" type="text" class="validate" >
+				                          <label for="first_name" class="">Nombre:</label>
+				                        </div>
+				                        <div class="input-field col s6">
+				                          <i class="mdi-action-account-circle prefix"></i>
+				                          <input id="last_name" type="text" class="validate">
+				                          <label for="last_name" class="">Apellido:</label>
+				                        </div>
+				                    </div>
+				                    <div class="row">
+				                    	<p><strong style="color: teal"> Direcci&oacuten. </strong></p>
+				                    	<div class="input-field col s6">
+				                          <i class="mdi-maps-place prefix"></i>
+				                          <input id="address" type="tel" class="validate">
+				                          <label for="address">Calle:</label>
+				                        </div>
+				                        <div class="input-field col s6">
+				                          <i class="mdi-social-location-city prefix"></i>
+				                          <input id="city" type="tel" class="validate">
+				                          <label for="city">Ciudad:</label>
+				                        </div>
+				                    </div>
+				                    <div class="row">
+				                        <div class="input-field col s6">
+				                          <i class="mdi-communication-phone prefix"></i>
+				                          <input id="icon_telephone" type="tel" class="validate">
+				                          <label for="icon_telephone">Tel&eacutefono:</label>
+				                        </div>
+				                        <div class="input-field col s6">
+				                          <i class="mdi-hardware-phone-iphone prefix"></i>
+				                          <input id="cell_phone" type="tel" class="validate">
+				                          <label for="cell_phone">Tel&eacutefono Movil:</label>
+				                        </div>
+				                    </div>
+				                    <div class="row">
+				                        <div class="input-field col s6">
+				                          <i class="mdi-communication-email prefix"></i>
+				                          <input id="email" type="email" class="validate">
+				                          <label for="email">Correo:</label>
+				                        </div>
+				                        <div class="input-field col s6">
+				                          <i class="mdi-social-cake prefix"></i>
+				                          <input id="birthday" type="text" class="validate">
+				                          <label for="birthday">Fecha de Nacimiento:</label>
+				                        </div>
+				                    </div>
+				                    <div class="row">
+										<div class="col s12 m10 l11">
+						                  <form action="#">
+						                    <div class="file-field input-field">
+						                      <input class="file-path validate" type="text">
+						                      <div class="btn">
+						                        <span>Imagen de Perfil</span>
+						                        <input type="file">
+						                      </div>
+						                    </div>
+						                  </form>
+						                </div>
+				                    </div>
+
+				                    <div class="box-footer">
+	                                	<a class="btn-flat waves-effect pink accent-2 white-text">
+					                		<i class="mdi-communication-email right"></i>
+											Guardar
+					                	</a>
+                            		</div>
+				                </div>
+				            </form>
                         </div>
                     </div>
 	        	</div>
